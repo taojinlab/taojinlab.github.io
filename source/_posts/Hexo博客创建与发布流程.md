@@ -5,6 +5,8 @@ tags:
   - Hexo
   - GitHub Pages
   - 博客
+categories:
+  - 博客搭建
 ---
 
 # Hexo博客创建与发布流程
