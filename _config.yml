@@ -4,12 +4,12 @@
 
 # Site
 title: Taojin Lab
-subtitle: ''
-description: ''
-keywords:
+subtitle: '个人博客'
+description: '记录学习、思考与实践'
+keywords: 博客, 学习, 技术, 记录
 author: taojinlab
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
