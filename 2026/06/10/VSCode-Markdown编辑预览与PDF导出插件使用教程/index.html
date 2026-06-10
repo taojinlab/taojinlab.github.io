@@ -1,0 +1,1220 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="taojinlab">
+  <meta name="keywords" content="博客, 学习, 技术, 记录">
+  
+    <meta name="description" content="VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程这篇笔记主要记录我在 VS Code 中编辑 Markdown、浏览 Markdown、导出 PDF 时常用的三个插件：  Markdown All in One：主要负责 Markdown 写作增强。 Markdown Preview Enhanced：主要负责增强预览、公式、图表和复杂文档查看。 Markdown PD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程">
+<meta property="og:url" content="https://taojinlab.github.io/2026/06/10/VSCode-Markdown%E7%BC%96%E8%BE%91%E9%A2%84%E8%A7%88%E4%B8%8EPDF%E5%AF%BC%E5%87%BA%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Taojin Lab">
+<meta property="og:description" content="VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程这篇笔记主要记录我在 VS Code 中编辑 Markdown、浏览 Markdown、导出 PDF 时常用的三个插件：  Markdown All in One：主要负责 Markdown 写作增强。 Markdown Preview Enhanced：主要负责增强预览、公式、图表和复杂文档查看。 Markdown PD">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-10T08:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-10T09:52:05.615Z">
+<meta property="article:author" content="taojinlab">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="PDF">
+<meta property="article:tag" content="VS Code">
+<meta property="article:tag" content="写作工具">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程 - Taojin Lab</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"taojinlab.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Taojin Lab</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-06-10 16:00" pubdate>
+          2026年6月10日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          49 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="VS-Code-中-Markdown-编辑、预览与-PDF-导出插件使用教程"><a href="#VS-Code-中-Markdown-编辑、预览与-PDF-导出插件使用教程" class="headerlink" title="VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程"></a>VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程</h1><p>这篇笔记主要记录我在 VS Code 中编辑 Markdown、浏览 Markdown、导出 PDF 时常用的三个插件：</p>
+<ol>
+<li><strong>Markdown All in One</strong>：主要负责 Markdown 写作增强。</li>
+<li><strong>Markdown Preview Enhanced</strong>：主要负责增强预览、公式、图表和复杂文档查看。</li>
+<li><strong>Markdown PDF</strong>：主要负责把 Markdown 稳定导出为 PDF、HTML、PNG、JPEG。</li>
+</ol>
+<span id="more"></span>
+
+<p>如果只是平时写博客、整理实验记录、写说明文档，我推荐的组合是：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">Markdown All in One 负责写<br>Markdown Preview Enhanced 负责看<br>Markdown PDF 负责导出<br></code></pre></td></tr></table></figure>
+
+<h2 id="一、安装插件"><a href="#一、安装插件" class="headerlink" title="一、安装插件"></a>一、安装插件</h2><p>在 VS Code 左侧点击 <strong>扩展</strong>，分别搜索并安装下面三个插件。</p>
+<table>
+<thead>
+<tr>
+<th>插件名称</th>
+<th>插件 ID</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Markdown All in One</td>
+<td><code>yzhang.markdown-all-in-one</code></td>
+<td>快捷键、目录、列表、表格、写作增强</td>
+</tr>
+<tr>
+<td>Markdown Preview Enhanced</td>
+<td><code>shd101wyy.markdown-preview-enhanced</code></td>
+<td>增强预览、公式、流程图、Mermaid、导出辅助</td>
+</tr>
+<tr>
+<td>Markdown PDF</td>
+<td><code>yzane.markdown-pdf</code></td>
+<td>导出 PDF、HTML、PNG、JPEG</td>
+</tr>
+</tbody></table>
+<p>也可以在 VS Code 中按 <code>Ctrl + P</code>，输入下面命令安装：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">ext install yzhang.markdown-all-in-one<br>ext install shd101wyy.markdown-preview-enhanced<br>ext install yzane.markdown-pdf<br></code></pre></td></tr></table></figure>
+
+<p>官方资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a></li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf">Markdown PDF</a></li>
+</ul>
+<h2 id="二、Markdown-All-in-One：负责高效写作"><a href="#二、Markdown-All-in-One：负责高效写作" class="headerlink" title="二、Markdown All in One：负责高效写作"></a>二、Markdown All in One：负责高效写作</h2><p>这个插件适合用来提升 Markdown 的编辑效率。它提供快捷键、自动目录、列表编辑、表格格式化、任务列表等功能。</p>
+<h3 id="1-常用功能"><a href="#1-常用功能" class="headerlink" title="1. 常用功能"></a>1. 常用功能</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>作用</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加粗、斜体快捷键</td>
+<td>快速设置文字格式</td>
+<td>写博客、说明文档、实验记录</td>
+</tr>
+<tr>
+<td>自动生成目录</td>
+<td>根据标题生成目录</td>
+<td>长文档、教程、论文笔记</td>
+</tr>
+<tr>
+<td>自动更新目录</td>
+<td>保存时自动更新目录</td>
+<td>文章结构经常修改时</td>
+</tr>
+<tr>
+<td>列表自动补全</td>
+<td>回车后自动延续列表</td>
+<td>写步骤、清单、流程</td>
+</tr>
+<tr>
+<td>表格格式化</td>
+<td>自动对齐 Markdown 表格</td>
+<td>写参数表、结果表</td>
+</tr>
+<tr>
+<td>任务列表</td>
+<td>支持 <code>- [ ]</code> 和 <code>- [x]</code></td>
+<td>写待办事项</td>
+</tr>
+</tbody></table>
+<h3 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + B</code></td>
+<td>加粗</td>
+</tr>
+<tr>
+<td><code>Ctrl + I</code></td>
+<td>斜体</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + ]</code></td>
+<td>提升标题级别</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + [</code></td>
+<td>降低标题级别</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + V</code></td>
+<td>打开或关闭预览</td>
+</tr>
+<tr>
+<td><code>Ctrl + K</code> 后按 <code>V</code></td>
+<td>在右侧打开预览</td>
+</tr>
+</tbody></table>
+<h3 id="3-生成目录"><a href="#3-生成目录" class="headerlink" title="3. 生成目录"></a>3. 生成目录</h3><p>打开 Markdown 文件后，按 <code>Ctrl + Shift + P</code>，输入：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Markdown All in One: Create Table of Contents<br></code></pre></td></tr></table></figure>
+
+<p>插件会根据文档中的标题自动生成目录。以后只要保存文件，目录通常会自动更新。</p>
+<p>建议文章标题使用清晰的层级：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><br><span class="hljs-section">## 二级标题</span><br><br><span class="hljs-section">### 三级标题</span><br></code></pre></td></tr></table></figure>
+
+<p>不要为了让字体变大而乱用标题级别。标题层级越清楚，目录越稳定，博客显示也越好看。</p>
+<h3 id="4-表格格式化"><a href="#4-表格格式化" class="headerlink" title="4. 表格格式化"></a>4. 表格格式化</h3><p>写表格时可以先写成下面这样：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">| 插件 | 作用 |<br>| --- | --- |<br>| Markdown All in One | 编辑增强 |<br>| Markdown PDF | 导出 PDF |<br></code></pre></td></tr></table></figure>
+
+<p>然后右键或通过命令面板执行格式化，表格会变得更整齐。</p>
+<h3 id="5-推荐设置"><a href="#5-推荐设置" class="headerlink" title="5. 推荐设置"></a>5. 推荐设置</h3><p>打开 VS Code 的 <code>settings.json</code>，可以加入下面配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;markdown.extension.toc.updateOnSave&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown.extension.toc.levels&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2..4&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown.extension.orderedList.autoRenumber&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown.extension.tableFormatter.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>这些设置的含义是：</p>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>toc.updateOnSave</code></td>
+<td>保存时自动更新目录</td>
+</tr>
+<tr>
+<td><code>toc.levels</code></td>
+<td>控制目录收录哪些标题级别</td>
+</tr>
+<tr>
+<td><code>orderedList.autoRenumber</code></td>
+<td>自动修正有序列表编号</td>
+</tr>
+<tr>
+<td><code>tableFormatter.enabled</code></td>
+<td>启用表格格式化</td>
+</tr>
+</tbody></table>
+<h2 id="三、Markdown-Preview-Enhanced：负责增强预览"><a href="#三、Markdown-Preview-Enhanced：负责增强预览" class="headerlink" title="三、Markdown Preview Enhanced：负责增强预览"></a>三、Markdown Preview Enhanced：负责增强预览</h2><p>Markdown Preview Enhanced 更适合查看复杂 Markdown。它支持滚动同步、数学公式、Mermaid 图、PlantUML、代码块、PDF 导出等功能。</p>
+<h3 id="1-适合什么场景"><a href="#1-适合什么场景" class="headerlink" title="1. 适合什么场景"></a>1. 适合什么场景</h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>是否推荐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>写普通博客</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>写带公式的文档</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>写流程图、结构图</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>写实验流程记录</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>只想简单导出 PDF</td>
+<td>可以用，但更推荐 Markdown PDF</td>
+</tr>
+</tbody></table>
+<h3 id="2-打开预览"><a href="#2-打开预览" class="headerlink" title="2. 打开预览"></a>2. 打开预览</h3><p>打开 Markdown 文件后，可以使用：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Ctrl + Shift + V<br></code></pre></td></tr></table></figure>
+
+<p>或者按 <code>Ctrl + Shift + P</code>，输入：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Markdown Preview Enhanced: Open Preview<br></code></pre></td></tr></table></figure>
+
+<p>如果想一边写一边看，可以选择在右侧打开预览。</p>
+<h3 id="3-数学公式"><a href="#3-数学公式" class="headerlink" title="3. 数学公式"></a>3. 数学公式</h3><p>Markdown Preview Enhanced 适合写公式，例如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">行内公式：$E = mc^2$<br><br>独立公式：<br><br>$$<br>y = ax + b<br>$$<br></code></pre></td></tr></table></figure>
+
+<p>这类功能适合写科研笔记、数据分析说明、实验方法文档。</p>
+<h3 id="4-Mermaid-图"><a href="#4-Mermaid-图" class="headerlink" title="4. Mermaid 图"></a>4. Mermaid 图</h3><p>可以直接在 Markdown 中写流程图：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">```mermaid</span><br><span class="hljs-code">flowchart LR</span><br><span class="hljs-code">    A[写 Markdown] --&gt; B[预览]</span><br><span class="hljs-code">    B --&gt; C[导出 PDF]</span><br><span class="hljs-code">```</span><br></code></pre></td></tr></table></figure>
+
+<p>适合画流程、技术路线、实验步骤、数据处理过程。</p>
+<h3 id="5-在浏览器中查看"><a href="#5-在浏览器中查看" class="headerlink" title="5. 在浏览器中查看"></a>5. 在浏览器中查看</h3><p>如果 VS Code 预览窗口显示正常，但想在浏览器中检查排版，可以在预览窗口中右键，选择：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Open in Browser<br></code></pre></td></tr></table></figure>
+
+<p>如果浏览器打开后是空白，通常检查下面几点：</p>
+<ol>
+<li>Markdown 文件是否保存。</li>
+<li>文件路径中是否有特殊字符。</li>
+<li>图片路径是否正确。</li>
+<li>VS Code 是否信任当前工作区。</li>
+<li>插件是否需要重启 VS Code 才能生效。</li>
+</ol>
+<h3 id="6-关于-PrinceXML-提示"><a href="#6-关于-PrinceXML-提示" class="headerlink" title="6. 关于 PrinceXML 提示"></a>6. 关于 PrinceXML 提示</h3><p>有时 Markdown Preview Enhanced 导出 PDF 会提示：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&quot;princexml&quot; is required to be installed.<br></code></pre></td></tr></table></figure>
+
+<p>这是因为它的某些 PDF 导出方式依赖外部工具 PrinceXML。对于普通用户来说，不一定需要安装 PrinceXML。更简单的办法是：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">用 Markdown Preview Enhanced 负责预览<br>用 Markdown PDF 负责导出 PDF<br></code></pre></td></tr></table></figure>
+
+<p>这样通常更省事，也更稳定。</p>
+<h2 id="四、Markdown-PDF：负责导出-PDF"><a href="#四、Markdown-PDF：负责导出-PDF" class="headerlink" title="四、Markdown PDF：负责导出 PDF"></a>四、Markdown PDF：负责导出 PDF</h2><p>Markdown PDF 的目标很明确，就是把 Markdown 转换为 PDF，也可以导出 HTML、PNG、JPEG。</p>
+<h3 id="1-常用导出格式"><a href="#1-常用导出格式" class="headerlink" title="1. 常用导出格式"></a>1. 常用导出格式</h3><table>
+<thead>
+<tr>
+<th>格式</th>
+<th>适合用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PDF</td>
+<td>正式传阅、打印、提交材料</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>网页查看、保留样式</td>
+</tr>
+<tr>
+<td>PNG</td>
+<td>截图式分享</td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>图片式分享</td>
+</tr>
+</tbody></table>
+<h3 id="2-导出-PDF-的方法"><a href="#2-导出-PDF-的方法" class="headerlink" title="2. 导出 PDF 的方法"></a>2. 导出 PDF 的方法</h3><p>打开 Markdown 文件后，右键点击编辑区，选择：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">markdown-pdf: Export (pdf)<br></code></pre></td></tr></table></figure>
+
+<p>也可以按 <code>Ctrl + Shift + P</code>，输入：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">markdown-pdf: Export (pdf)<br></code></pre></td></tr></table></figure>
+
+<p>导出的 PDF 通常会保存在 Markdown 文件所在文件夹中。</p>
+<h3 id="3-一次导出多种格式"><a href="#3-一次导出多种格式" class="headerlink" title="3. 一次导出多种格式"></a>3. 一次导出多种格式</h3><p>如果想同时导出 PDF、HTML、PNG、JPEG，可以选择：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">markdown-pdf: Export (all: pdf, html, png, jpeg)<br></code></pre></td></tr></table></figure>
+
+<p>也可以在 <code>settings.json</code> 中设置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;markdown-pdf.type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;pdf&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;html&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>这样导出时会同时生成 PDF 和 HTML。</p>
+<h3 id="4-推荐设置"><a href="#4-推荐设置" class="headerlink" title="4. 推荐设置"></a>4. 推荐设置</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;markdown-pdf.type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pdf&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.outputDirectory&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.convertOnSave&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.printBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.format&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;A4&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.margin.top&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;20mm&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.margin.bottom&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;20mm&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.margin.left&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;18mm&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;markdown-pdf.margin.right&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;18mm&quot;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>这些设置适合大多数中文文档：</p>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>type</code></td>
+<td>默认导出 PDF</td>
+</tr>
+<tr>
+<td><code>outputDirectory</code></td>
+<td>留空表示输出到当前文件夹</td>
+</tr>
+<tr>
+<td><code>convertOnSave</code></td>
+<td>保存时不自动导出，避免生成太多文件</td>
+</tr>
+<tr>
+<td><code>printBackground</code></td>
+<td>保留背景色和代码块背景</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>使用 A4 页面</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td>控制页边距</td>
+</tr>
+</tbody></table>
+<h3 id="5-自定义-PDF-样式"><a href="#5-自定义-PDF-样式" class="headerlink" title="5. 自定义 PDF 样式"></a>5. 自定义 PDF 样式</h3><p>如果希望 PDF 更像正式文档，可以新建一个 CSS 文件，例如：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">markdown-pdf.css<br></code></pre></td></tr></table></figure>
+
+<p>写入：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span> &#123;<br>  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Microsoft YaHei&quot;</span>, <span class="hljs-string">&quot;SimSun&quot;</span>, Arial, sans-serif;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">11pt</span>;<br>  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.75</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#222</span>;<br>&#125;<br><br><span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span>, <span class="hljs-selector-tag">h3</span> &#123;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#1f4e79</span>;<br>&#125;<br><br><span class="hljs-selector-tag">table</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>  <span class="hljs-attribute">border-collapse</span>: collapse;<br>&#125;<br><br><span class="hljs-selector-tag">th</span>, <span class="hljs-selector-tag">td</span> &#123;<br>  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#cccccc</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">6px</span> <span class="hljs-number">8px</span>;<br>&#125;<br><br><span class="hljs-selector-tag">code</span> &#123;<br>  <span class="hljs-attribute">font-family</span>: Consolas, <span class="hljs-string">&quot;Courier New&quot;</span>, monospace;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>然后在 <code>settings.json</code> 中添加：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;markdown-pdf.styles&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;markdown-pdf.css&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>这样导出的 PDF 会使用自定义样式。</p>
+<h2 id="五、我的推荐工作流程"><a href="#五、我的推荐工作流程" class="headerlink" title="五、我的推荐工作流程"></a>五、我的推荐工作流程</h2><h3 id="1-写博客"><a href="#1-写博客" class="headerlink" title="1. 写博客"></a>1. 写博客</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">用 Markdown All in One 写正文<br>用 Markdown Preview Enhanced 检查预览<br>用 Hexo 生成博客页面<br></code></pre></td></tr></table></figure>
+
+<p>适合发布到个人博客、GitHub Pages、实验室网站。</p>
+<h3 id="2-写可传阅材料"><a href="#2-写可传阅材料" class="headerlink" title="2. 写可传阅材料"></a>2. 写可传阅材料</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">用 Markdown All in One 写正文<br>用 Markdown Preview Enhanced 检查版式<br>用 Markdown PDF 导出 PDF<br></code></pre></td></tr></table></figure>
+
+<p>适合公司简介、项目介绍、操作说明、实验记录。</p>
+<h3 id="3-写科研笔记"><a href="#3-写科研笔记" class="headerlink" title="3. 写科研笔记"></a>3. 写科研笔记</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">Markdown All in One：整理标题、表格、目录<br>Markdown Preview Enhanced：查看公式、流程图、图表<br>Markdown PDF：导出正式 PDF<br></code></pre></td></tr></table></figure>
+
+<p>适合方法记录、数据分析流程、论文阅读笔记。</p>
+<h2 id="六、常见问题"><a href="#六、常见问题" class="headerlink" title="六、常见问题"></a>六、常见问题</h2><h3 id="1-为什么导出的-PDF-是空白？"><a href="#1-为什么导出的-PDF-是空白？" class="headerlink" title="1. 为什么导出的 PDF 是空白？"></a>1. 为什么导出的 PDF 是空白？</h3><p>可能原因：</p>
+<ol>
+<li>Markdown 文件没有保存。</li>
+<li>图片路径错误，导致导出卡住或显示异常。</li>
+<li>文档中有复杂 HTML，导出插件没有正常解析。</li>
+<li>插件冲突，建议禁用其它 Markdown 插件后再试。</li>
+<li>VS Code 没有信任当前工作区。</li>
+<li>Markdown PDF 需要可用的 Chrome、Edge 或 Chromium。</li>
+</ol>
+<p>解决顺序建议：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">保存文件<br>重启 VS Code<br>换一个最简单的 Markdown 文件测试<br>检查图片路径<br>使用 Markdown PDF 导出<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-为什么浏览器打开预览是空白？"><a href="#2-为什么浏览器打开预览是空白？" class="headerlink" title="2. 为什么浏览器打开预览是空白？"></a>2. 为什么浏览器打开预览是空白？</h3><p>通常先检查：</p>
+<ol>
+<li>文件是否保存。</li>
+<li>预览窗口本身是否正常。</li>
+<li>浏览器是否拦截本地资源。</li>
+<li>图片路径是否用了错误的绝对路径。</li>
+<li>插件是否需要重新加载窗口。</li>
+</ol>
+<p>可以在 VS Code 中执行：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Developer: Reload Window<br></code></pre></td></tr></table></figure>
+
+<p>然后重新打开预览。</p>
+<h3 id="3-为什么-Markdown-Preview-Enhanced-要求安装-PrinceXML？"><a href="#3-为什么-Markdown-Preview-Enhanced-要求安装-PrinceXML？" class="headerlink" title="3. 为什么 Markdown Preview Enhanced 要求安装 PrinceXML？"></a>3. 为什么 Markdown Preview Enhanced 要求安装 PrinceXML？</h3><p>这是某些 PDF 导出方式需要的外部程序。普通写作不一定要装。更推荐把职责分开：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">Markdown Preview Enhanced 只负责预览<br>Markdown PDF 负责导出 PDF<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-图片应该怎么写路径？"><a href="#4-图片应该怎么写路径？" class="headerlink" title="4. 图片应该怎么写路径？"></a>4. 图片应该怎么写路径？</h3><p>建议把图片放在 Markdown 文件附近，例如：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">文章.md<br>images/<br>  figure1.png<br></code></pre></td></tr></table></figure>
+
+<p>然后在 Markdown 中写：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">![<span class="hljs-string">图片说明</span>](<span class="hljs-link">images/figure1.png</span>)<br></code></pre></td></tr></table></figure>
+
+<p>这样无论预览、导出 PDF，还是发布到博客，都更容易管理。</p>
+<h3 id="5-中文文件名可以用吗？"><a href="#5-中文文件名可以用吗？" class="headerlink" title="5. 中文文件名可以用吗？"></a>5. 中文文件名可以用吗？</h3><p>可以用，但如果导出或浏览器预览出现问题，可以先测试英文路径。比如把：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">D:\我的文档\公司简介.md<br></code></pre></td></tr></table></figure>
+
+<p>临时改成：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">D:\docs\company-profile.md<br></code></pre></td></tr></table></figure>
+
+<p>如果英文路径正常，说明问题可能来自路径编码或插件对特殊字符的兼容性。</p>
+<h2 id="七、推荐组合总结"><a href="#七、推荐组合总结" class="headerlink" title="七、推荐组合总结"></a>七、推荐组合总结</h2><table>
+<thead>
+<tr>
+<th>需求</th>
+<th>推荐插件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>快速写 Markdown</td>
+<td>Markdown All in One</td>
+</tr>
+<tr>
+<td>自动生成目录</td>
+<td>Markdown All in One</td>
+</tr>
+<tr>
+<td>写表格</td>
+<td>Markdown All in One</td>
+</tr>
+<tr>
+<td>预览公式</td>
+<td>Markdown Preview Enhanced</td>
+</tr>
+<tr>
+<td>预览 Mermaid 图</td>
+<td>Markdown Preview Enhanced</td>
+</tr>
+<tr>
+<td>导出 PDF</td>
+<td>Markdown PDF</td>
+</tr>
+<tr>
+<td>导出 HTML、PNG、JPEG</td>
+<td>Markdown PDF</td>
+</tr>
+<tr>
+<td>写博客</td>
+<td>Markdown All in One + Markdown Preview Enhanced</td>
+</tr>
+<tr>
+<td>做可传阅 PDF</td>
+<td>Markdown All in One + Markdown PDF</td>
+</tr>
+</tbody></table>
+<p>最省心的使用方式是：不要让一个插件承担所有任务，而是让三个插件各做自己最擅长的事。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">写作：Markdown All in One<br>预览：Markdown Preview Enhanced<br>导出：Markdown PDF<br></code></pre></td></tr></table></figure>
+
+<p>这样在 VS Code 中就可以完成从 Markdown 写作、实时预览到 PDF 导出的完整流程。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/" class="category-chain-item">工具教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/VS-Code/" class="print-no-link">#VS Code</a>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/PDF/" class="print-no-link">#PDF</a>
+      
+        <a href="/tags/%E5%86%99%E4%BD%9C%E5%B7%A5%E5%85%B7/" class="print-no-link">#写作工具</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>VS Code 中 Markdown 编辑、预览与 PDF 导出插件使用教程</div>
+      <div>https://taojinlab.github.io/2026/06/10/VSCode-Markdown编辑预览与PDF导出插件使用教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>taojinlab</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年6月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/05/28/%E4%BA%8C%E6%AC%A1%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83/" title="二次博客发布">
+                        <span class="hidden-mobile">二次博客发布</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+    expandAllToc();
+    bindTocToggle();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+        expandAllToc();
+        bindTocToggle();
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
